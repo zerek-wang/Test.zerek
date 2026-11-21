@@ -1,0 +1,32 @@
+﻿{
+  "version": 1,
+  "description": "小爱音箱远程命令队列。新增 status=pending 且带唯一 id 的命令即可，WorkBuddy 转发器会自动执行并记录状态。",
+  "device": {
+    "model": "L07",
+    "ip": "192.168.31.192",
+    "firmware": "29"
+  },
+  "supported_actions": {
+    "tts": {"text": "要播报的文本"},
+    "command": {"text": "要让小爱执行的指令", "silent": "1=语音回应(默认),0=静默执行"},
+    "volume": {"volume": "0-100"},
+    "pause": {},
+    "stop": {},
+    "play": {},
+    "play_url": {"url": "音频URL"},
+    "status": {}
+  },
+  "updated_at": "",
+  "commands": [
+    {
+      "id": "example_001",
+      "action": "tts",
+      "payload": {"text": "你好，远程命令测试"},
+      "status": "pending",
+      "created_at": "2026-11-21T09:00:00+08:00",
+      "created_by": "remote"
+{"id":"cmd_001","action":"tts","payload":{"text":"门铃响了"},"status":"pending","created_at":"2026-11-21T09:30:00+08:00"}
+
+    }
+  ]
+}
